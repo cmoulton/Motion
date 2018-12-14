@@ -9,12 +9,15 @@ Pod::Spec.new do |s|
   s.authors = { 'CosmicMind, Inc.' => 'support@cosmicmind.com' }
   s.source = { :git => 'https://github.com/CosmicMind/Motion.git', :tag => s.version }
   s.platform = :ios, '8.0'
+  s.tvos.deployment_target = '9.0'
   
   s.default_subspec = 'Core'
 
   s.subspec 'Core' do |s|
     s.ios.deployment_target = '8.0'
+    s.tvos.deployment_target = '9.0'
     s.ios.source_files = 'Sources/**/*.swift'
+    s.tvos.source_files = 'Sources/**/*.swift'
     s.requires_arc = true
   end
 
